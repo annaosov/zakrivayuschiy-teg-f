@@ -17,4 +17,134 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: var(--bg-color);
+  color: var(--themes-main-color);
+  font-family: var(--main-font);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: var(--bg-image);
+}
+
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: var(--main-font-veriable);
+  }
+} 
+
+.header {
+  border: 2px solid var(--themes-main-color, #000);
+  background: var(--bg-color);
+  width: 100vi;
+  height: 327px;
+  margin: 100px auto;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+}
+
+.logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.link-title {
+  font-size: clamp(3.0625rem, 3.0625rem + 0vw, 3.0625rem);
+  text-decoration: none;
+}
+
+.secondary-title {
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+}
+
+.theme-menu {
+  padding-block: 22px;
+}
+
+.theme-menu__item:not(:last-of-type) {
+  margin-block-end: 9px;
+}
+
+.theme-menu__button {
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  text-transform: inherit;
+  position: relative;
+  padding-inline-start: 26px;
+}
+
+.theme-menu__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--accent-color);
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled::before {
+  content: url(../svg/▶.svg);
+  position: absolute;
+  left: 4px;
+  animation-name: arrow;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrow {
+  0% {
+    translate: 0;
+  }
+
+  50% {
+    translate: 4px;
+  }
+
+  100% {
+    translate: 0;
+  }
+}
+
+@media (width >= 700px) {
+  .header {
+    width: 700px;
+    height: 368px;
+  }
+
+  .link-title {
+    font-size: clamp(4.0625rem, 4.0625rem + 0vw, 4.0625rem);
+  }
+  
+  .secondary-title {
+    font-size: clamp(1.4375rem, 1.4375rem + 0vw, 1.4375rem);
+  }
 }
