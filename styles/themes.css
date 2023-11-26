@@ -9,18 +9,27 @@
     --bg-color: #fff;
     --accent-color: rgba(0, 0, 0, 0.6);
     --themes-main-color: #000;
+    --themes-arrow: url(../svg/arrow-light.svg);
 }
 
 :root.theme-dark {
     --bg-color: #000;
     --accent-color: rgba(0, 204, 20, 0.6);
     --themes-main-color: #00CC14;
+    --themes-arrow: url(../svg/arrow-dark.svg);
   }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #000;
         --accent-color: rgba(0, 204, 20, 0.6);
-        --themes-main-color: #00CC14;    
+        --themes-main-color: #00CC14;
+        --themes-arrow: url(../svg/arrow-dark.svg);    
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --themes-arrow: url(../svg/arrow-light.svg);    
     }
 }

@@ -110,7 +110,7 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: url(../svg/▶.svg);
+  content: var(--themes-arrow);
   position: absolute;
   left: 4px;
   animation-name: arrow;
