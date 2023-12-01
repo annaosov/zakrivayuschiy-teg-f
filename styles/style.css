@@ -161,6 +161,34 @@
   width: 100%;
 }
 
+.code {
+  filter: sepia(0.6);
+}
+
+.floppy {
+  filter: brightness(30%);
+}
+
+.team {
+  filter: blur(5px);
+}
+
+.crash {
+  filter: contrast(250%);
+}
+
+.cat {
+  filter: invert(100%);
+}
+
+.mario {
+  filter: brightness(30%) saturate(390%);
+}
+
+.girl {
+  filter: saturate(390%);
+}
+
 .img-label {
   position: absolute;
   top: 23px;
@@ -346,6 +374,7 @@
   text-transform: capitalize;
   font-family: var(--accent-font);
   font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  line-height: 90%;
   background: linear-gradient(90deg, var(--themes-main-color) 50%, var(--bg-color) 50%);
   transition: background 0.5s ease-in-out;
   background-size:  260px 1px;
@@ -369,6 +398,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 15px 20px;
 }
@@ -388,14 +418,7 @@
 }
 
 .button-with-icon {
-  font-family: var(--accent-font);
-  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
-  background: linear-gradient(90deg, var(--themes-main-color) 50%, var(--bg-color) 50%);
-  transition: background 0.5s ease-in-out;
   background-size:  700px 1px;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 .footer__button:hover .button-with-icon {
@@ -406,7 +429,57 @@
   z-index: 1;
   position: relative;
   mix-blend-mode: difference;
-  color:var(--button-with-icon-color);
+  color: var(--button-with-icon-color);
+}
+
+.footer .button__text {
+  text-transform: none;
+}
+
+.dialog[open] {
+  background: var(--bg-color);
+  border: 2px solid var(--themes-main-color);
+  font-family: var(--accent-font);
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  text-transform: uppercase;
+  width: clamp(21.313rem, 21.048rem + 1.127vw, 22.063rem);
+  padding-inline: 40px;
+  padding-block: 30px;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__conteiner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog__icon {
+  flex-shrink: 0;
+  color: var(--themes-main-color);
+}
+
+.dialog .footer__button {
+  width: 100%;
+}
+
+.dialog__text {
+  color: var(--themes-main-color);
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  line-height: 150%;
+}
+
+.dialog .footer__button {
+  margin-block: 30px 0;
+  min-width: 257px;
+  padding-block: 12px;
+}
+
+.dialog .button__text {
+  text-transform: uppercase;
 }
 
 @media (width >= 700px) {
@@ -439,5 +512,9 @@
   .footer__icon {
     width: 21px;
     height: 21px;
+  }
+
+  .dialog[open] {
+    padding-inline: 30px;
   }
 }
