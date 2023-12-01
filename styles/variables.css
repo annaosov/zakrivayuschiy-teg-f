@@ -11,4 +11,6 @@
       linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
     --core-sparks: #FF0000;
     --button-with-icon-color: #fff;
+    --title-font-weight: 700;
+    --main-font-weight: 400;
   }

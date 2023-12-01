@@ -9,22 +9,24 @@
     --bg-color: #fff;
     --accent-color: rgba(0, 0, 0, 0.6);
     --themes-main-color: #000;
-    --themes-arrow: url(../svg/arrow-light.svg);
     --bg-image: repeating-linear-gradient(to left, transparent 0 2px, #d3d3d3 2px 4px),
       repeating-linear-gradient(to bottom, transparent 0 2px, #d3d3d3 2px 4px),
       linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
     --button-with-icon-color: #fff;
+    --title-font-weight: 700;
+    --main-font-weight: 400;
 }
 
 :root.theme-dark {
     --bg-color: #000;
     --accent-color: rgba(0, 204, 20, 0.6);
     --themes-main-color: #00CC14;
-    --themes-arrow: url(../svg/arrow-dark.svg);
     --bg-image: repeating-linear-gradient(to left, transparent 0 2px, #000 2px 4px),
       repeating-linear-gradient(to bottom, transparent 0 2px, #000 2px 4px),
       linear-gradient(to bottom, #007f0c, #004306);
     --button-with-icon-color: #00CC14;
+    --title-font-weight: 785;
+    --main-font-weight: 465;
   }
 
 @media (prefers-color-scheme: dark) {
@@ -32,16 +34,11 @@
         --bg-color: #000;
         --accent-color: rgba(0, 204, 20, 0.6);
         --themes-main-color: #00CC14;
-        --themes-arrow: url(../svg/arrow-dark.svg);
         --bg-image: repeating-linear-gradient(to left, transparent 0 2px, #000 2px 4px),
             repeating-linear-gradient(to bottom, transparent 0 2px, #000 2px 4px),
             linear-gradient(to bottom, #007f0c, #004306); 
-            --button-with-icon-color: #00CC14;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --themes-arrow: url(../svg/arrow-light.svg);    
+        --button-with-icon-color: #00CC14;
+        --title-font-weight: 785;
+        --main-font-weight: 465;
     }
 }

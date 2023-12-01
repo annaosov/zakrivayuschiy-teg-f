@@ -24,6 +24,7 @@
   background-position: center;
   background-attachment: fixed;
   background-image: var(--bg-image);
+  font-weight: var(--main-font-weight);
 }
 
 @supports (font-variation-settings: normal) {
@@ -110,9 +111,10 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: var(--themes-arrow);
+  content: "\25BA";
   position: absolute;
   left: 4px;
+  top: -2px;
   animation-name: arrow;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -149,6 +151,7 @@
   background: var(--bg-color);
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   padding: 5px 10px;
+  font-weight: var(--title-font-weight);
 }
 
 .img-conteiner {
